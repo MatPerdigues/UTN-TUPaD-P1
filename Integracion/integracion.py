@@ -5,27 +5,36 @@ if(opc=="1"):
     num=input("Ingresá el número binario que querés convertir: ")
     potencia=len(num)-1
     acum=0
-    binario=True
     for i in num:
-        if(int(i)>1):
-            print("Por favor, ingresá un número binario válido.")
-            binario=False
-            break
-        else:
+        try:
             conv=int(i)*(2**potencia)
             acum+=conv
-            potencia-=1        
-    if binario: print(f"El número binario {num} es igual a {acum} en el sistema decimal")
+            potencia-=1
+        except ValueError:
+            print("Por favor, ingresá un número binario válido.")    
+            exit() 
+    print(f"El número binario {num} es igual a {acum} en el sistema decimal")
  
 elif(opc=="2"):
-    num=int(input("Ingresá el número entero decimal que te gustaría convertir: "))
-    resultado=""
-    while num>=1:
-        resto=num%2        
-        resultado=resultado+str(resto)        
-        num=int(num/2)    
-    resInvertido = resultado[::-1]
-    print(f"El número ingresado equivale a {resInvertido} en el sistema binario")
+    try:
+        num=float(input("Ingresá el número entero que te gustaría convertir: "))
+        num = int(num)
+    except ValueError:
+        print("Por favor, ingresá un número entero.")
+        exit()
+                
+    if(num==0):
+       print(f"El número ingresado equivale a 0 en el sistema binario")
+    elif num<0: 
+        print("Por favor, ingresá un número positivo")
+    else:
+        resultado=""
+        while num>=1:
+            resto=num%2        
+            resultado=resultado+str(resto)        
+            num=int(num/2)    
+        resInvertido = resultado[::-1]
+        print(f"El número ingresado equivale a {resInvertido} en el sistema binario")
 
 else:
     print("Por favor, ingresá una opción válida")
