@@ -2,8 +2,11 @@
 def conversion_binarios(num):             # Se define la funcion conversión_binarios 
     potencia=len(num)-1                   # Calcula la potencia máxima de los términos 
     acum=0                                # acumula la suma de los terminos
-    for i in num:                         # mantiene la variable como str para iterar directamente
+    for i in num:                         # mantiene la variable como str para iterar directamente                                    
         try:
+            if(int(i)>1):                     # asegura que el usuario ingrese solo 0 o 1.
+                print("Por favor, ingresá un número binario válido.") 
+                exit() 
             conv=int(i)*(2**potencia)     # se intenta convertir cada caracter a int y se lo multiplica por 2 elevado a la potencia que corresponda al término
             acum+=conv                    # se suma el resultado del término                          
             potencia-=1                   # se ajusta la potencia antes de pasar al próximo término (índice)
