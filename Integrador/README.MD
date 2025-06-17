@@ -6,7 +6,7 @@ El presente trabajo tiene como finalidad analizar algoritmos diseñados para una
 
 ***Instrucciones de uso***
 
-Los algoritmos son presentados en un Notebook de Jupyter para que cada uno de ellos pueda ser ejecutados de manera aislada. El usuario solo debe ejecutar cada algoritmo y obtendrá los registros de tiempos de ejecución.
+Al ejecutar el Programa, el usuario deberá seleccionar el algoritmo cuya eficiencia desea medir. Al finalizar este proceso y al obtener los resultados del análsis, el usuario podrá seleccionar repetidamente un nuevo algoritmo hasta que se desee finalizar el Programa. 
 
 
 
@@ -17,4 +17,4 @@ Podrá observarse la diferencia en términos de eficiencia entre los algoritmos 
 
 **Link video**
 
-https://www.youtube.com/watch?v=Odr6K2V1ADQ&ab_channel=AlejandroPereyra
+https://www.youtube.com/watch?v=pszPrVAwUWs&ab_channel=AlejandroPereyra
